@@ -1,0 +1,28 @@
+import random
+def obstacle_detection(user_input):
+    obstacle_number = [3,16,7,45,78]
+    if user_input in obstacle_number:
+        return True
+    else :
+        return False
+    
+def avoide_obstacles():
+    while True:
+         try :
+            user_input = int(input("enter a number  :"))
+            if obstacle_detection(user_input):
+                random_position = random.randint(1,100)
+                print("obstacle detection position:",random_position)
+            else :
+                print("no obstacle detection moving forward")
+         exceptValueError:
+            print("Invalid input pls enter a number")
+        
+if __name__ == '__main__':
+    print("Obstacle avoidance program")
+    print("enter number to simulate obstacle detection")
+    print("press ctrcl+c to existt")
+    try :
+        avoide_obstacles()
+    except KeyboardInterrupt:
+        print("program terminated")
