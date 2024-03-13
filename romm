@@ -1,0 +1,7 @@
+k = int(input())
+rooms = list(map(int, input().split()))
+
+for i in rooms:
+    if rooms.count(i) != k:
+        print(i)
+        break
