@@ -5,3 +5,21 @@ for i in rooms:
     if rooms.count(i) != k:
         print(i)
         break
+import numpy
+
+N,M = list(map(int,input().split()))
+A_total = []
+B_total = []
+for _ in range(N):
+    A = list(map(int,input().split()))
+    B = list(map(int,input().split()))
+    A_total.append(A)
+    B_total.append(B)
+A = numpy.array(A_total)
+B = numpy.array(B_total)
+print(numpy.add(A,B))
+print(numpy.subtract(A,B))
+print(numpy.multiply(A,B))
+print(numpy.floor_divide(A,B))
+print(numpy.mod(A,B))
+print(numpy.power(A,B))
